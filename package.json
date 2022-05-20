@@ -11,7 +11,9 @@
   },
   "dependencies": {
     "@firebase/firestore": "^3.4.9",
+    "@react-navigation/bottom-tabs": "^6.3.1",
     "@react-navigation/native": "^6.0.10",
+    "@react-navigation/native-stack": "^6.6.2",
     "dayjs": "^1.11.2",
     "expo": "~45.0.0",
     "expo-linear-gradient": "~11.3.0",

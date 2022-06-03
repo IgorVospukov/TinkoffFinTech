@@ -17,14 +17,14 @@ export const AuthContext = createContext<IContext>({} as IContext)
 const AuthProvider: FC  = ({children}) => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoadingInitial, setIsLoadingInitial] = useState(true);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
 
   const registerHandler = async (email:string, password: string) => {
     setIsLoading(true);
     try {
       const {user} = await register(email, password);
       await addDoc(collection(db, 'users'), {
-        id: user.uid,
+        _id: user.uid,
         displayName: 'no name'
       })
     } catch (error: any) {
